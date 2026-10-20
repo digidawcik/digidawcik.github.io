@@ -298,3 +298,32 @@ h1, h2, h3, h4 { line-height: 1.2; margin: 0; letter-spacing: -0.015em; }
   .lightbox figure { grid-column: 1 / -1; grid-row: 1; }
   .lb-prev { justify-self: end; } .lb-next { justify-self: start; }
 }
+
+/* ---------- Project headers & UI/UX case ---------- */
+.case + .case { margin-top: 32px; }
+.case-head { margin-bottom: 24px; }
+.case-kicker { margin: 0 0 6px; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.case-title { font-size: clamp(24px, 3vw, 30px); font-weight: 800; }
+.case-sub { margin: 8px 0 0; color: var(--muted); font-size: 17px; max-width: 680px; }
+
+.phones {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 172px; gap: 16px;
+  overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+  padding: 24px; margin: 0 -4px;
+  background: #0d1117; border-radius: var(--radius);
+  scrollbar-width: thin; scrollbar-color: #3a414b transparent;
+}
+.phone {
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: 0; border: 0; background: none; color: #c9d1d9; font: inherit; cursor: zoom-in;
+}
+.phone img { width: 100%; height: auto; transition: transform .25s ease; }
+.phone:hover img { transform: translateY(-4px); }
+.phone span { font-size: 13px; font-weight: 600; }
+@media (max-width: 600px) { .phones { grid-auto-columns: 150px; padding: 16px; } }
+
+.flow { margin: 0; padding-left: 22px; display: grid; gap: 10px; color: var(--muted); }
+.flow li strong { color: var(--ink); }
+.flow li::marker { color: var(--accent); font-weight: 700; }
+.case-body + .stack { margin: 28px 0 0; }
